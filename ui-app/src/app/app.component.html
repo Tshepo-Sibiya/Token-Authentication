@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col col-md-12">
+        <br />
+        <div class="panel panel-success text-center">
+            <div class="panel-heading">Demo Auth App</div>
+        </div>
+        <div class="panel panel-body text-center">
+            <div class="panel-success">
+                <ul class="list-inline pull-right">
+                    <li class="sprite-link1 btn btn-link"><a routerLink="/home">Home</a></li>
+                    <li class="sprite-link2 btn btn-link"><a routerLink="/registration">Register</a></li>
+                    <li class="sprite-link3 btn btn-link">
+                        <button class="btn btn-link" (click)="logout()" *ngIf="this.tokenData">Logout</button>
+                        <a routerLink="/login" *ngIf="!this.tokenData">Login</a>[{{username}}]
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="panel panel-success text-center">
+            <div class="panel-heading">
+             <a class="btn btn-link">   Demo Token Based Authentication App.</a>
+            </div>
+        </div>
+    </div>
+</div>

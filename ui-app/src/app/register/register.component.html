@@ -1,0 +1,33 @@
+<form class="form-horizontal" [formGroup]="registrationForm" (ngSubmit)="register()">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="card card-container">
+          <img id="profile-img" style="margin: auto" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+
+          <p id="profile-name" class="profile-name-card">New User</p>
+          
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" id="firstname" class="form-control" formControlName="firstname" placeholder="Firstname" required autofocus><br />
+            <input type="text" id="lastname" class="form-control" formControlName="lastname" placeholder="Lastname" required autofocus>
+            <hr />
+            <input type="email" id="username" class="form-control" formControlName="username" placeholder="Username" required autofocus><br />
+
+            <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password" required autofocus><br />
+            <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword" placeholder="Confirm password" required>
+            <!-- <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div> -->
+            <hr />
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Submit</button>
+          <br />
+          <span>
+            Already have an account, login <a routerLink="/login">here</a>
+          </span><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

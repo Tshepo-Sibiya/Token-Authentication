@@ -1,0 +1,31 @@
+<form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="login()">
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="card card-container">
+                <img id="profile-img" style="margin: auto" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+
+                <p id="profile-name" class="profile-name-card">Login</p>
+
+                    <span id="reauth-email" class="reauth-email"></span>
+                    <input type="email" id="inputEmail" formControlName="username" class="form-control" placeholder="Email address" required
+                        autofocus><br />
+                    <input type="password" id="inputPassword" formControlName="password" class="form-control" placeholder="Password" required><br/>
+                    <div id="remember" class="checkbox">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div><br/>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                <br />
+                <a href="#" class="forgot-password">
+                    Forgot the password?
+                </a><br /><br /><br />
+                <span>
+                    Don't have an account? <a routerLink="/registration">Here</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
